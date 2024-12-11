@@ -1,6 +1,6 @@
-# Testing
+<h1 align=center>Testing</h1>
 
-En este repositorio podrán encontrar todos mis proyectos de testing de software. 
-*¡Sean bienvenidos de explorar!*
+<p align=center>En este repositorio podrán encontrar todos mis proyectos de testing de software. 
+*¡Sean bienvenidos de explorar!*</p>
 
-In this repository you will find my projects of testing. *Feel free to explore them!*
+<p align=center>In this repository you will find my projects of testing. *Feel free to explore them!*</p>
