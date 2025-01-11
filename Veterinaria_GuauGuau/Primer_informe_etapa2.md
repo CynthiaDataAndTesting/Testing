@@ -22,7 +22,26 @@
   <ol>
     <li><a href = "#introduccion">Introducción</a></li>
     <li><a href = "#alcance">Alcance</a></li>
-    <li><a href = "#desarrollo">Desarrollo y resultados claves</a></li>
+    <li><a href = "#desarrollo">Desarrollo y resultados claves</a>
+    <br>
+    <ol>
+      <li><a href = "#autenticacion">Autenticación de usuario</a></li>
+      <li><a href = "#registro_cliente">Registro de nuevo Cliente</a></li>
+      <li><a href = "#registro_mascota">Registro de Mascotas</a>
+      <br>
+      <ol>
+        <li><a href = "#web">Versión Web</a></li>
+        <li><a href = "#mobile">Versión Mobile</a></li>
+      </ol></li>
+      <li><a href = "#registro_vacunas">Registro de Vacunas</a></li>
+      <li><a href = "#base">Base de Datos</a>
+      <br>
+      <ol>
+        <li><a href = "#tabla_mascotas">Tabla de Mascotas</a></li>
+        <li><a href = "#tabla_usuarios">Tabla de Usuarios</a></li>
+        <li><a href = "#tabla_clientes">Tabla de Clientes</a></li>
+      </ol></li>
+    </ol></li>
     <li><a href = "#datos">Datos y métricas</a></li>
     <li><a href = "#recomendaciones">Recomendaciones</a></li>
     <li><a href = "#conclusiones">Conclusiones</a></li>
@@ -65,12 +84,12 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
 <div id = "desarrollo">
   <h2>DESARROLLO Y RESULTADOS CLAVES</h2>
   <p>
-    <h3>Autenticación de Usuario</h3> <br>
+    <h3 id = "autenticacion">Autenticación de Usuario</h3> <br>
     En esta oportunidad no fue posible avanzar con la ejecución de las pruebas previamente detalladas, en el Plan de pruebas de Casos de Uso(Informe de Pruebas- Requerimiento funcionales RF01) debido a que la funcionalidad para el login no está desarrollada aún o se encuentra en proceso, y no fue proporcionada por el equipo de desarrollo. 
   </p>
   <br>
   <p>
-    <h3>Registro de nuevo cliente</h3> 
+    <h3 id = "registro_cliente">Registro de nuevo cliente</h3> 
     <br>
     <strong>Pruebas Funcionales:</strong> Todas las pruebas funcionales relacionadas con el registro de nuevos clientes en la aplicación Veterinaria Guau Guau se completaron de manera satisfactoria en su mayoría. El sistema permite registrar clientes, mostrando confirmación al finalizar el registro exitoso. Sin embargo, se detectaron fallos en algunos escenarios específicos, donde el sistema no mostró mensajes de error para datos inválidos en los campos de entrada. 
     <br>
@@ -85,15 +104,15 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
   </p>
   <br>
   <p>
-    <h3>Registro de Mascotas</h3> <br>
-    <h4>Versión Web</h4> <br>
+    <h3 id = ""registro_mascota>Registro de Mascotas</h3> <br>
+    <h4 id = "web">Versión Web</h4> <br>
     <strong>Pruebas de validación de datos:</strong> El 30% de las pruebas de validación de datos  se completaron satisfactoriamente.  El sistema no detecta valores límites, ni diferencia caracteres alfabéticos de alfanuméricos. 
     <br>
     <br>
     <strong> Prueba exploratoria:</strong> La interfaz de versión web funciona correctamente. Se adapta a la pantalla si el usuario se dispone a hacer zoom y no tiene problemas de usabilidad.
     <br>
     <br>
-    <h4>Versión Mobile</h4>
+    <h4 id = "mobile">Versión Mobile</h4>
     <br>
     <strong>Pruebas de validación de datos:</strong> El 35% de las pruebas de validación de datos se completaron satisfactoriamente. El sistema mobile presenta los mismos errores que su contraparte en Web. No detecta valores límites, ni diferencia caracteres alfabéticos de alfanuméricos. 
     <br>
@@ -102,7 +121,7 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
   </p>
   <br>
   <p>
-    <h3>Registro de Vacunas</h3>
+    <h3 id = "registro_vacunas">Registro de Vacunas</h3>
     <br>
     <strong>Pruebas Funcionales:</strong> Las pruebas funcionales confirmaron que el sistema permite el ingreso correcto de datos válidos en el módulo de registro de vacunas, mostrando un mensaje de confirmación exitoso al usuario cuando se completan todos los campos requeridos de manera adecuada.
     <br>
@@ -122,9 +141,9 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
   </p>
   <br>
   <p>
-    <h3>Base de Datos</h3>
+    <h3 id = "base">Base de Datos</h3>
     <br>
-    <h4>Tabla Mascotas</h4>
+    <h4 id = "tabla_mascotas">Tabla Mascotas</h4>
     <br>
     Para el módulo de registro de mascotas, se desarrollaron 11 casos de prueba con el fin de verificar la capacidad del sistema para gestionar la inserción de datos en diferentes escenarios, incluyendo validaciones de datos como el Nombre,Fecha de Nacimiento y Especie.
     <br>
@@ -149,7 +168,7 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
     El caso de prueba fallido se relaciona con la validación de la fecha de nacimiento de la mascota, ya que el sistema no debería permitir ingresar una fecha futura como válida. Este hallazgo resalta la importancia de implementar validaciones adicionales en la base de datos para evitar este tipo de errores en el ingreso de datos.
     <br>
     <br>
-    <h4>Tabla de Usuarios</h4>
+    <h4 id = "tabla_usuarios">Tabla de Usuarios</h4>
     <br>
     Se ejecutaron un total de 7 casos de prueba, diseñados para cubrir diversas combinaciones de entradas válidas e inválidas. Esto incluyó tanto la autenticación con credenciales correctas e incorrectas como la prueba de límites de tamaño en los campos NombreUsuario y Contrasenia.
     <br>
@@ -168,7 +187,7 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
     Aunque la mayoría de los casos de autenticación resultaron exitosos, el caso CP07 falló debido a la longitud del campo NombreUsuario, que supera el límite de 50 caracteres. MySQL emitió una alerta y restringió la inserción a este límite, lo que indica que es necesario implementar validaciones adicionales para evitar intentos de inserción que excedan esta longitud.
     <br>
     <br>
-    <h4>Tabla de Clientes</h4>
+    <h4 id = "tabla_clientes">Tabla de Clientes</h4>
     <br>
     Para el módulo de registro de cliente, se desarrollaron 11 casos de prueba con el fin de verificar la capacidad del sistema para gestionar la inserción de datos en diferentes escenarios, incluyendo validaciones de correo electrónico y límites de campo.
     <br>
