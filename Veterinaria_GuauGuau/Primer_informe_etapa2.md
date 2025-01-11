@@ -17,7 +17,7 @@
 
 <br>
 
-<div>
+<div id = "indice">
  <h2>ÍNDICE</h2> 
   <ol>
     <li><a href = "#introduccion">Introducción</a></li>
@@ -104,7 +104,7 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
   </p>
   <br>
   <p>
-    <h3 id = ""registro_mascota>Registro de Mascotas</h3> <br>
+    <h3 id = "registro_mascota">Registro de Mascotas</h3> <br>
     <h4 id = "web">Versión Web</h4> <br>
     <strong>Pruebas de validación de datos:</strong> El 30% de las pruebas de validación de datos  se completaron satisfactoriamente.  El sistema no detecta valores límites, ni diferencia caracteres alfabéticos de alfanuméricos. 
     <br>
@@ -267,4 +267,12 @@ Se propone este modelo preliminar para tener una base de datos más práctica, n
 Además, pueden causar una mala experiencia de usuario reduciendo la confianza que tenga éste en el sistema. 
 Problemas de validación en una etapa inicial, no solo dificulta el procesamiento de la información, sino que también puede implicar futuros costos de mantenimiento y corrección de errores. 
 Por lo tanto, se considera que la validación de datos en el sistema de la Veterinaria Guau Guau es un problema esencial a resolver. 
+</div>
+
+<br>
+
+<div align = right>
+  <a href = "#indice">
+  <img alt="Static Badge" src="https://img.shields.io/badge/INICIO%20%E2%98%9D%EF%B8%8F%20-%20blue?style=for-the-badge" width = 150px>
+  </a>
 </div>
