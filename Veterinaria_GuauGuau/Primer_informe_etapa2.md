@@ -1,6 +1,6 @@
 <div align = center>
 <h1>INFORME EJECUTIVO DE TESTING</h1>
-  <img src = "Veterinaria_GuauGuau/logo.png" alt = "logo" width = 300px>
+  <img src = "logo.png" alt = "logo" width = 300px>
   <br>
   <br>
   <p>Almirón, Sheila <br>
@@ -22,6 +22,10 @@
   <ol>
     <li><a href = "#introduccion">Introducción</a></li>
     <li><a href = "#alcance">Alcance</a></li>
+    <li><a href = "#desarrollo">Desarrollo y resultados claves</a></li>
+    <li><a href = "#datos">Datos y métricas</a></li>
+    <li><a href = "#recomendaciones">Recomendaciones</a></li>
+    <li><a href = "#conclusiones">Conclusiones</a></li>
   </ol>
 </div>
 
@@ -58,7 +62,7 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
 
 <br>
 
-<div>
+<div id = "desarrollo">
   <h2>DESARROLLO Y RESULTADOS CLAVES</h2>
   <p>
     <h3>Autenticación de Usuario</h3> <br>
@@ -197,7 +201,51 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
 
 <br>
 
-<div>
+<div id = "datos">
   <h2>DATOS Y MÉTRICAS</h2>
   
+</div>
+
+<br>
+
+<div id = "recomendaciones">
+  <h2>RECOMENDACIONES</h2>
+  <br>
+  <p>
+  En base a los resultados obtenidos durante el proceso de testing se hacen las siguientes recomendaciones:
+    <br>
+    <br>
+    Reforzar la validación de datos en los distintos formularios para proteger al sistema de los posibles errores de usuario, aplicando restricciones a los distintos campos. 
+Se recomienda aplicar técnicas de valores límites, ya que se detectó que esta es la mayor debilidad del sistema hasta el momento.
+  <br>
+  <br>
+  En referencia a la documentación del sistema, se solicita agregar en los anexos del ESRE especificaciones más exhaustivas de las distintas variables que maneja el sistema. Por ejemplo, en el “Registro de Vacunas” se puede especificar qué se entiende por Fecha de Aplicación. Si ésta hace referencia al momento en que hace el registro o si es el momento en el que esta se aplica al paciente. También es necesario detallar si es necesaria una restricción a la fecha de vencimiento de las vacunas, si es que esta fecha depende directamente del tipo de vacuna.
+  <br>
+  <br>
+  Con respecto a la base de datos proporcionada, se sugiere adoptar un modelo que aporte mayor completitud.
+Se sugiere una Tabla Usuarios que contenga tanto Clientes como Administradores. Los cuales compartirán atributos como Nombre y Apellido. 
+Además, los Clientes estarán relacionados a una tabla Mascotas que tendrán como atributos el Nombre, la Fecha de Nacimiento y la Especie. Las especies sólo podrán ser Perro, Gato, Ave u Otro. Para facilitar una posible clasificación. 
+Se recomienda tener una tabla Especie, para poder organizar las mascotas en distintas subtablas como Perro, Gato y Ave. 
+Las mascotas reciben vacunas, y éstas se registrarán en la tabla Vacunas. Las cuales tendrán un número identificatorio, Nombre, Dosis (Primera, Segunda o Tercera), Fecha de Aplicación y Fecha de vencimiento.  
+Por otro lado, el administrador registrará a los Clientes, sus mascotas y las vacunas que éstas tengan, en el sistema. 
+Se propone este modelo preliminar para tener una base de datos más práctica, normalizada y poder facilitar al usuario su uso y análisis para la toma de decisiones informadas.
+Con respecto a la base de datos proporcionada, se sugiere adoptar un modelo que aporte mayor completitud.
+Se sugiere una Tabla Usuarios que contenga tanto Clientes como Administradores. Los cuales compartirán atributos como Nombre y Apellido. 
+Además, los Clientes estarán relacionados a una tabla Mascotas que tendrán como atributos el Nombre, la Fecha de Nacimiento y la Especie. Las especies sólo podrán ser Perro, Gato, Ave u Otro. Para facilitar una posible clasificación. 
+Se recomienda tener una tabla Especie, para poder organizar las mascotas en distintas subtablas como Perro, Gato y Ave. 
+Las mascotas reciben vacunas, y éstas se registrarán en la tabla Vacunas. Las cuales tendrán un número identificatorio, Nombre, Dosis (Primera, Segunda o Tercera), Fecha de Aplicación y Fecha de vencimiento.  
+Por otro lado, el administrador registrará a los Clientes, sus mascotas y las vacunas que éstas tengan, en el sistema. 
+Se propone este modelo preliminar para tener una base de datos más práctica, normalizada y poder facilitar al usuario su uso y análisis para la toma de decisiones informadas.
+  </p>
+</div>
+
+<br>
+
+<div id = "conclusiones">
+  <h2>CONCLUSIONES</h2>
+  <br>
+  En términos generales, se puede decir que el sistema aún se encuentra en una etapa preliminar. Si bien el 64% de las pruebas realizadas se completaron con éxito, las distintas secciones presentan problemas de validación de datos. Estos problemas pueden significar debilidades tanto en seguridad como en la integridad de la información. 
+Además, pueden causar una mala experiencia de usuario reduciendo la confianza que tenga éste en el sistema. 
+Problemas de validación en una etapa inicial, no solo dificulta el procesamiento de la información, sino que también puede implicar futuros costos de mantenimiento y corrección de errores. 
+Por lo tanto, se considera que la validación de datos en el sistema de la Veterinaria Guau Guau es un problema esencial a resolver. 
 </div>
