@@ -344,5 +344,5 @@ Este informe resume los resultados clave del proceso de retesting. Si tienes alg
 </div>
   
 <div align = right>
-  <a href = "#indice"><img alt="Static Badge" src="https://img.shields.io/badge/INICIO%20%E2%98%9D%EF%B8%8F%20-%20blue?style=for-the-badge" width = 100px></a>
+  <a href = "#indice"><img alt="Static Badge" src="https://img.shields.io/badge/INICIO%20%E2%98%9D%EF%B8%8F%20-%20blue?style=for-the-badge" width = 150px></a>
 </div>
