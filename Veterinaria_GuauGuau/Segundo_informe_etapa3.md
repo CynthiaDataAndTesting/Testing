@@ -19,7 +19,7 @@
 
 <br>
 
-<div>
+<div id = "indice">
   <h2>ÍNDICE</h2>
   <ol>
     <li>Introducción</li>
@@ -344,5 +344,5 @@ Este informe resume los resultados clave del proceso de retesting. Si tienes alg
 </div>
   
 <div align = right>
-  <img alt="Static Badge" src="https://img.shields.io/badge/INICIO%20%E2%98%9D%EF%B8%8F%20-%20blue?style=for-the-badge">
+  <a href = "#indice"><img alt="Static Badge" src="https://img.shields.io/badge/INICIO%20%E2%98%9D%EF%B8%8F%20-%20blue?style=for-the-badge" width = 100px></a>
 </div>
