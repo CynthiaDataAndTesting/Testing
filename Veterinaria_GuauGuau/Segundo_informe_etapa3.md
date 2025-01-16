@@ -307,6 +307,7 @@ Se muestra en el modelo las dos posibles formas de representar el atributo Dosis
 
 
   </p>
+  <img src = "MER.png" alt = "diagrama">
 </div>
 
 <br>
