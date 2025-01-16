@@ -220,12 +220,129 @@ Esto permite: <br>
       <li>Aplicar cambios con mayor facilidad. Es posible realizar cambios en los distintos campos sin la necesidad de hacerlo para toda una cadena de dirección.</li>
     </ul>
 </li>
-  <li></li>
-  <li></li>
+  <li>Con respecto a la tabla MASCOTAS, se detectaron dos posibles mejoras en el atributo Especie: <br>
+    <ul>
+      <li>Utilizar una restricción CHECK para estandarizar los datos y evitar errores o variaciones innecesarias en la información. Por ejemplo, se evitarían inconsistencias como “perro”, “Perro”, “PERRO” para la misma especie. 
+Esto brinda un mejoramiento en la calidad en la validación de datos y minimiza la posibilidad de errores humanos al ingresar especies no válidas. Por  último, la restricción CHECK permite facilidad de mantenimiento, ya que, si se necesita agregar más especies, solo basta con actualizar dicha restricción.</li>
+      <li>Crear una tabla de referencia llamada ESPECIES. Esta tabla enlista las especies válidas. Luego se puede establecer una clave foránea en la tabla MASCOTAS que apunte a la tabla ESPECIES. 
+Esto permite gestionar y actualizar las especies válidas de forma más sencilla.
+</li>
+    </ul>
+  </li>
+  <li>En la tabla VACUNAS se detectaron otras potenciales mejoras:
+<br>
+    <ul>
+      <li>Con respecto al atributo Dosis se entiende que es necesaria una mejor clarificación.
+</li>
+      <li>Con respecto a los atributos Fecha Aplicación y Fecha Vencimiento, se sugiere agregar una restricción CHECK para asegurar que Fecha Vencimiento sea posterior a Fecha Aplicación. Esto evitaría errores en los registros de fechas. 
+</li>
+      <li>Otra posible sugerencia de mejora es crear una tabla de TIPOS_DE_VACUNAS con dos campos: Nombre y VacunaID. Luego, esta tabla puede ser referenciada en la tabla VACUNAS a través de una llave foránea. Esto puede resultar útil para estandarizar las vacunas en un solo lugar.</li>
+      <li>Por último, se sugiere como mejora establecer una clave única compuesta por Mascota ID, Nombre y Fecha Aplicacion para evitar que se registre la misma vacuna para una mascota en la misma fecha. 
+</li>
+    </ul>
+  </li>
 </ol>  
   </p>
 </div>
 
+<br>
+
+<div>
+  <h2>Accesibilidad</h2>
+  <p>
+    El 64% de las pruebas realizadas para verificar la accesibilidad del sitio resultaron ser exitosas. <br>
+Si bien esto puede percibirse como un sitio con una buena noticia para los usuarios con discapacidades visuales o motrices, aún queda mucho por mejorar en este aspecto. 
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h2>Compatibilidad y Usabilidad</h2>
+  <p>
+    Se realizaron 14 pruebas para verificar la compatibilidad y usabilidad del sitio web de la Veterinaria Guau Guau. 
+El 86% de estas pruebas fueron ejecutadas con éxito. El 14% de las pruebas resultaron fallidas y todas éstas se concentraron en la parte móvil.
+Todas las pruebas ejecutadas en distintos navegadores del entorno web resultaron exitosas. A partir de esto, se puede inferir que el sitio no presenta problemas de compatibilidad ni usabilidad en navegadores web. Sin embargo, estos problemas surgen en el entorno móvil, lo que sugiere que el desarrollo actual de las funcionalidades no está enfocado en estos usuarios.
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h2>DATOS Y MÉTRICAS</h2>
+</div>
+
+<br>
+
+<div>
+  <h2>RECOMENDACIONES</h2>
+  <p>
+    En base a los resultados obtenidos durante el proceso de testing se hacen las siguientes recomendaciones: <br>
+
+Reforzar la validación de datos en los distintos formularios para proteger al sistema de los posibles errores de usuario, aplicando restricciones a los distintos campos. 
+Se recomienda aplicar técnicas de valores límites, ya que este continúa siendo la mayor debilidad del sistema.  <br>
+
+Para mejorar la compatibilidad del sitio se sugiere aplicar responsive design, para que éste se adapte a las distintas resoluciones de pantalla. También vuelve adaptables los elementos que lo componen, como las tablas en la sección “Dashboard”, ya que éstas se “salen” del formulario cuando contienen datos muy extensos. <br>
+
+Con respecto a la usabilidad del sitio, se recomienda agregar al “Dashboard” una tabla de Clientes para poder gestionarlos desde la administración. Si se necesita “dar de baja” un cliente, el sistema no permite realizar esta acción. Tampoco se visualiza a qué cliente corresponde qué mascota debido a la ausencia de una tabla. 
+Por último, para mejorar la usabilidad y la experiencia de usuario, se recomienda que el sistema permita “editar” mascotas y vacunas con el fin de actualizar o corregir información ya existente. 
+En cuanto a la interfaz, se recomienda el uso de mensajes más descriptivos y reubicar algunos botones (como la casilla de registrar mascota en el formulario Registro de Cliente). <br>
+
+En cuanto a la accesibilidad del sitio, se sugiere adoptar algunas medidas para mejorar la experiencia de los usuarios con discapacidades. Estas medidas se basan en las normas WCAG y son por ejemplo:
+<br>
+<ul>
+  <li>Mejora en la navegación por teclado. El contenido principal no está señalizado y esto obliga al usuario a recorrer toda la página para poder encontrarlo.</li>
+  <li>Agregar botones de ayuda o más información.</li>
+  <li>Agregar al código atributos ARIA para mejorar la experiencia de usuarios no videntes o con discapacidades visuales. Sin estos atributos las tecnologías de asistencia no reconocen correctamente los mensajes. 
+</li>
+  <li>Cambiar el título de la página “Sistemas de Gestión de Clientes y Mascotas - Veterinaria XYZ” por el título “Sistemas de Gestión de Clientes y Mascotas - Guau Guau Veterinaria”. Esto permite que los usuarios no videntes puedan reconocer la empresa a través de la tecnología de asistencia. Un nombre de empresa incorrecto puede traer confusión y frustración. 
+</li>
+</ul>
+<br>
+En referencia a la documentación del sistema, se solicita agregar en los anexos del ESRE especificaciones más exhaustivas de las distintas variables que maneja el sistema. Por ejemplo, en el “Registro de Vacunas” se puede especificar qué se entiende por Dosis. Si se está haciendo referencia a la cantidad de dosis aplicada en la mascota (por ejemplo 0.5 mg) o si hace referencia al número de dosis aplicada en la mascota (por ejemplo primera o segunda dosis). <br>
+
+Con respecto a la base de datos proporcionada, se sugiere adoptar un modelo que aporte mayor completitud que incluya las sugerencias aportadas en el informe técnico. <br>
+
+Se muestra en el modelo las dos posibles formas de representar el atributo Dosis. Como un atributo único en el caso de que se entienda como el número de dosis aplicada. Como dos atributos distintos en caso de entenderla como la cantidad de dosis aplicada. <br>
+
+
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h2>CONCLUSIONES</h2>
+  <h3>Validación de datos
+</h3>
+  <p>
+    En términos generales, se puede decir que el sistema aún se encuentra con limitaciones. Si bien la mayoría de las pruebas realizadas se completaron con éxito, el 36% de las pruebas fallidas se relacionan a problemas de validación de datos y de usabilidad. Estos problemas pueden significar debilidades tanto en seguridad (inyecciones SQL por ejemplo) como en la integridad de la información (por ejemplo ingreso de información incompleta o datos erróneos). <br>
+Además, pueden causar una mala experiencia de usuario reduciendo la confianza que tenga éste en el sistema reduciendo su disposición a utilizarlo. 
+Problemas de validación en una etapa inicial, no solo dificulta el procesamiento de la información, sino que también puede implicar futuros costos de mantenimiento y corrección de errores. 
+
+  </p>
+
+  <h3>Usabilidad</h3>
+  <p>
+    En cuanto a la interfaz, se puede inferir que aplicar las sugerencias de mejora que aparecen en este informe (como agregar una tabla de gestión de clientes en la sección Dashboard) mejoraría la usabilidad de la herramienta. 
+
+  </p>
+
+  <h3>Accesibilidad</h3>
+  <p>
+    Por último, si bien la mayoría de las pruebas de accesibilidad fueron exitosas, el sitio aún carece de características importantes que incluyan a los usuarios de tecnologías de asistencia, como el uso de botones de ayuda o una buena configuración de alto contraste. 
+  </p>
+
+  <h3>Conclusión final</h3>
+  <p>
+    Por lo tanto, se concluye que la validación de datos sigue siendo el principal problema del sitio web de la veterinaria y desde el equipo se cree que éste debe ser atendido como prioridad. Una posible solución es agregar criterios de aceptación de datos en cada campo de los distintos formularios. Además, se sugiere reforzar la integridad de los datos permitiendo al usuario releer, corregir y confirmar los datos antes de registrar un nuevo cliente, mascota o vacuna. Esto permitirá optimizar la experiencia del usuario y reducir el riesgo de errores en futuras interacciones con el sistema.
+<br>
+<br>
+Este informe resume los resultados clave del proceso de retesting. Si tienes alguna pregunta o necesitas información adicional, no dudes en contactarnos.
+
+  </p>
+</div>
+  
 <div align = right>
   <img alt="Static Badge" src="https://img.shields.io/badge/INICIO%20%E2%98%9D%EF%B8%8F%20-%20blue?style=for-the-badge">
 </div>
