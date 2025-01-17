@@ -222,7 +222,24 @@ Este trabajo no abarca pruebas de seguridad ni pruebas funcionales efectivamente
 
 <div id = "datos">
   <h2>DATOS Y MÉTRICAS</h2>
-  
+  <div align = center>
+  <img src = "casos_x_miembro.png" alt = "casos de prueba por miembro">
+  <br>
+  <br>
+  <img src = "resultados_x_miembro.png" alt = "resultados de pruebas por miembro">
+  <br>
+  <br>
+  <img src = "casos_x_estado.png" alt = "cantidad de casos de prueba por estado de ejecución">
+  <br>
+  <br>
+  <img src = "casos_x_seccion.png" alt = "cantidad de casos de pruebas por sección">
+  <br>
+  <br>
+  <img src = "ambiente_x_miembro.png" alt = "cobertura por miembro del equipo">
+  <br>
+  <br>
+  <img src = "resultados_x_ambiente.png" alt = "resultados de pruebas por ambiente">
+  </div>
 </div>
 
 <br>
