@@ -22,12 +22,12 @@
 <div id = "indice">
   <h2>ÍNDICE</h2>
   <ol>
-    <li>Introducción</li>
-    <li>Alcance</li>
-    <li>Desarrollo y resultados claves
+    <li><a href = "#introduccion">Introducción</a></li>
+    <li><a href = "#alcance">Alcance</a></li>
+    <li><a href = "desarrollo">Desarrollo y resultados claves</a>
     <br>
     <ol>
-        <li>Autenticación de usuario</li>
+        <li><a href = "#autenticacion">Autenticación de usuario</a></li>
         <li>Registro de nuevo Cliente</li>
         <li>Registro de Mascotas
         <br>
@@ -40,7 +40,7 @@
         <li>Accesibilidad</li>
         <li>Compatibilidad y Usabilidad</li>
       </ol></li>
-    <li>Datos y métricas</li>
+    <li><a href = "#datos">Datos y métricas</a></li>
     <li>Recomendaciones</li>
     <li>Conclusiones</li>
   </ol>
@@ -101,10 +101,10 @@
 
 <br>
 
-<div idd = "desarrollo">
+<div id = "desarrollo">
   <h2>DESARROLLO Y RESULTADOS CLAVES</h2>
   <br>
-  <h3>Autenticación de Usuario</h3>
+  <h3 id = "autenticacion">Autenticación de Usuario</h3>
   <p>En esta oportunidad se ejecutaron las 10 pruebas de validación de datos que en la instancia anterior estaban bloqueadas y no se pudieron ejecutar. Se utilizaron las credenciales proporcionadas por el equipo de desarrollo, alternando las pruebas para probar su accesibilidad y limitaciones.
   <br>
   <br>
@@ -268,8 +268,30 @@ Todas las pruebas ejecutadas en distintos navegadores del entorno web resultaron
 
 <br>
 
-<div>
+<div id = "datos">
   <h2>DATOS Y MÉTRICAS</h2>
+  <div align = center>
+  <img src = "test_cases_environment.png" alt = "casos de prueba">
+  </div>
+  <p>
+    El 64% de las pruebas realizadas por el equipo resultaron ser exitosas. <br>
+Mientras que el 36% no pudieron ser completadas satisfactoriamente, ya sea porque fallaron o porque quedaron con estado “bloqueado”.
+  </p>
+<br>
+  <div align = center>
+    <img src = "execution_results.png" alt = "resultados por ambiente">
+  </div>
+  <p>
+    La mayoría de las pruebas fueron ejecutadas en Web. Tanto en Chrome, como en otros navegadores como Opera GX, Microsoft Edge, Firefox, etc.
+  </p>
+<br>
+  <div align = center>
+    <img src = "execution_results_2.png" alt = "resultados por ambiente y tester">
+  </div>
+  <p>
+    Todos los Testers del equipo aplicaron pruebas en el sitio web utilizando como entorno la web. <br>
+Dos miembros se enfocaron en web durante esta etapa del trabajo, mientras que el resto trabajó tanto en web como en mobile. 
+  </p>
 </div>
 
 <br>
