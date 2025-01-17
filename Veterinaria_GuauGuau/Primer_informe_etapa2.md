@@ -273,6 +273,8 @@ Las mascotas reciben vacunas, y éstas se registrarán en la tabla Vacunas. Las 
 Por otro lado, el administrador registrará a los Clientes, sus mascotas y las vacunas que éstas tengan, en el sistema. 
 Se propone este modelo preliminar para tener una base de datos más práctica, normalizada y poder facilitar al usuario su uso y análisis para la toma de decisiones informadas.
   </p>
+
+  <img src = "diagram1.drawio.png" alt = "mer sugerido">
 </div>
 
 <br>
