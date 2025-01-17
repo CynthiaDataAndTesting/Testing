@@ -28,21 +28,21 @@
     <br>
     <ol>
         <li><a href = "#autenticacion">Autenticación de usuario</a></li>
-        <li>Registro de nuevo Cliente</li>
-        <li>Registro de Mascotas
+        <li><a href = "#registro_cliente">Registro de nuevo Cliente</a></li>
+        <li><a href = "#registro_mascota">Registro de Mascotas</a>
         <br>
         <ol>
-            <li>Versión Web</li>
-            <li>Versión Mobile</li>
+            <li><a href = "#version_web">Versión Web</a></li>
+            <li><a href = "#version_mobile">Versión Mobile</a></li>
           </ol></li>
-        <li>Registro de Vacunas</li>
-        <li>Base de Datos</li>
-        <li>Accesibilidad</li>
-        <li>Compatibilidad y Usabilidad</li>
+        <li><a href = "#registro_vacunas">Registro de Vacunas</a></li>
+        <li><a href = "#database">Base de Datos</a></li>
+        <li><a href = "#accesibilidad">Accesibilidad</a></li>
+        <li><a href = "#compatibilidad">Compatibilidad y Usabilidad</a></li>
       </ol></li>
     <li><a href = "#datos">Datos y métricas</a></li>
-    <li>Recomendaciones</li>
-    <li>Conclusiones</li>
+    <li><a href = "#recomendaciones">Recomendaciones</a></li>
+    <li><a href = "#conclusiones">Conclusiones</a></li>
   </ol>
 </div>
 
@@ -140,7 +140,7 @@ Otra observación respecto al manejo intuitivo de la página, es que al momento 
   <br>
   Se mantiene la misma observación mencionada en el navegador Firefox respecto al manejo intuitivo de la página.
   </p>
-  <h3>Registro de nuevo Cliente</h3>
+  <h3 id = "registro_cliente">Registro de nuevo Cliente</h3>
   <p>
    Pruebas Funcionales: En el retesting de las pruebas funcionales relacionadas con el registro de nuevos clientes en la aplicación Veterinaria Guau Guau la mayoría de las pruebas fallaron. Aunque el sistema permite registrar clientes y muestra una confirmación adecuada en algunos casos de registro exitoso, se detectaron fallos en 9 escenarios específicos. En estos casos, el sistema no mostró mensajes de error al ingresar datos inválidos en los campos de entrada, lo que permitió el registro incorrecto de clientes, afectando así la integridad de la información. 
 <br>
@@ -159,8 +159,8 @@ Manejo de errores: Se comprobó que el sistema muestra mensajes de error claros 
   <br>
 Hallazgos Adicionales: Durante el proceso de retesting, se identificaron inconsistencias en la validación de datos no válidos en ciertos campos, así como oportunidades de mejora en la claridad de algunos mensajes de confirmación y error. Se recomienda revisar y fortalecer la lógica de validación para asegurar que todos los datos ingresados sean verificados y gestionados correctamente, evitando registros incorrectos de clientes. 
   </p>
-<h3>Registro de Mascotas</h3>
-  <h4>Versión Web</h4>
+<h3 id = "registro_mascota">Registro de Mascotas</h3>
+  <h4 id = "version_web">Versión Web</h4>
   <p>
   La versión web mostró mejoras en la funcionalidad del campo de especie, aunque persisten algunos problemas menores de usabilidad:
     <ul>
@@ -174,7 +174,7 @@ Hallazgos Adicionales: Durante el proceso de retesting, se identificaron inconsi
   <br>
   Prueba exploratoria: La interfaz de versión web funciona correctamente. Se adapta a la pantalla si el usuario se dispone a hacer zoom y no tiene problemas de usabilidad.
   </p>
-  <h4>Versión Mobile</h4>
+  <h4 id = "version_mobile">Versión Mobile</h4>
   <p>
    En la versión mobile, se observaron mejoras similares, aunque algunos problemas de visualización y usabilidad persisten:
     <ul>
@@ -186,7 +186,7 @@ Hallazgos Adicionales: Durante el proceso de retesting, se identificaron inconsi
   <br>
  Prueba exploratoria: La interfaz de la versión mobile presenta varios problemas. No es responsive, por lo que si el usuario decide hacer zoom, éste no se adapta a la pantalla del dispositivo. Además, el logo de la empresa no carga y está dañado. Los botones de “Cancelar” y “Registrar Vacunas” ahora si se encuentran conectados a los respectivos formularios. Por lo tanto, cumplen su función al ejecutarlos. 
   </p>
-  <h3>Registro de Vacunas</h3>
+  <h3 id = "registro_vacunas">Registro de Vacunas</h3>
   <p>
     <ul>
       <li>Pruebas Funcionales: Las pruebas funcionales confirmaron que el sistema permite el ingreso correcto de datos válidos en el módulo de registro de vacunas, mostrando un mensaje de confirmación exitoso al usuario cuando se completan todos los campos requeridos de manera adecuada.</li>
@@ -206,7 +206,7 @@ Hallazgos Adicionales: Durante el proceso de retesting, se identificaron inconsi
 
 <br>
 
-<div>
+<div id = "database">
   <h2>Base de Datos</h2>
   <p>
   La base de datos de la veterinaria Guau Guau está compuesta por tres entidades CLIENTE, MASCOTA y VACUNA. Todas ellas presentan oportunidades de mejoras o tienen alguna limitación con respecto a las formas de normalización.
@@ -247,7 +247,7 @@ Esto permite gestionar y actualizar las especies válidas de forma más sencilla
 
 <br>
 
-<div>
+<div id = "accesibilidad">
   <h2>Accesibilidad</h2>
   <p>
     El 64% de las pruebas realizadas para verificar la accesibilidad del sitio resultaron ser exitosas. <br>
@@ -257,7 +257,7 @@ Si bien esto puede percibirse como un sitio con una buena noticia para los usuar
 
 <br>
 
-<div>
+<div id = "compatibilidad">
   <h2>Compatibilidad y Usabilidad</h2>
   <p>
     Se realizaron 14 pruebas para verificar la compatibilidad y usabilidad del sitio web de la Veterinaria Guau Guau. 
@@ -296,7 +296,7 @@ Dos miembros se enfocaron en web durante esta etapa del trabajo, mientras que el
 
 <br>
 
-<div>
+<div id = "recomendaciones">
   <h2>RECOMENDACIONES</h2>
   <p>
     En base a los resultados obtenidos durante el proceso de testing se hacen las siguientes recomendaciones: <br>
@@ -334,7 +334,7 @@ Se muestra en el modelo las dos posibles formas de representar el atributo Dosis
 
 <br>
 
-<div>
+<div id = "conclusiones">
   <h2>CONCLUSIONES</h2>
   <h3>Validación de datos
 </h3>
