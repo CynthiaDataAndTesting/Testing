@@ -1,6 +1,6 @@
 <div align =  center>
 <h1>INFORME EJECUTIVO DE TESTING</h1>
-  <img src = "logo.png" alt = "logo">
+  <img src = "logo.png" alt = "logo" width = 300px>
   <br>
   <br>
   <p>
