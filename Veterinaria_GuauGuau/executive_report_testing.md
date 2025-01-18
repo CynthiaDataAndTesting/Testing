@@ -99,10 +99,10 @@ The testing process consisted of a wide variety of approaches and techniques inc
   <strong>  Pruebas de confirmación:</strong> Se hizo trabajo de retesting para verificar que las incidencias reportadas fueron efectivamente solucionadas.
     <br>
     <br>
-  <strong>Confirmation tests:</strong>Retesting was performed to verify that the reported issues were effectively resolved. 
+  <strong>Confirmation tests:</strong> Retesting was performed to verify that the reported issues were effectively resolved. 
     <br>
     <br>
-    <strong>Regression tests:</strong>Regression tests were performed to verify that the solutions applied by the development team did not cause new incidents. 
+    <strong>Regression tests:</strong> Regression tests were performed to verify that the solutions applied by the development team did not cause new incidents. 
     <br>
     <br>
     This work does not include exhaustive tests on non-functional requirements such as performance, maintenance or scalability because the system is not hosted on a server.
@@ -177,85 +177,88 @@ Error handling: It was verified that the system provides clear error messages wh
 Additional findings:
 During the retesting process, inconsistencies were identified in the validation of invalid data in certain fields, as well as opportunities to improve the clarity of some confirmation and error messages. It is recommended to review and strengthen the validation logic to ensure that all entered data is correctly verified and handled, preventing incorrect client registrations. 
   </p>
-<h3 id = "registro_mascota">Registro de Mascotas</h3>
-  <h4 id = "version_web">Versión Web</h4>
+<h3 id = "registro_mascota">Pet Registration</h3>
+  <h4 id = "version_web">Web Version </h4>
   <p>
-  La versión web mostró mejoras en la funcionalidad del campo de especie, aunque persisten algunos problemas menores de usabilidad:
+  The web version showed improvements in the functionality of the species field, although some minor usability issues persist:
     <ul>
-      <li>Campo de Especie en Lista Desplegable: La lista desplegable permitió registrar correctamente las mascotas en categorías predeterminadas y mostrar especies no comunes con la opción “Otro”, mejorando la precisión de los registros.</li>
-      <li>Errores en Validación de Otros Campos: Persisten algunos errores en la validación de datos en otros campos, sin bloquear el flujo de registro, pero afectando la integridad de los datos.</li>
-      <li>Compatibilidad en Navegadores Secundarios: Se observaron diferencias en la visualización de elementos en Firefox y Safari, lo que podría mejorar para asegurar consistencia visual.</li>
+      <li>Species field - Dropdown list: The dropdown list allowed the correct registration of pets in predefined categories and included uncommon species through the ‘Other’ option, enhancing the accuracy of the records. </li>
+      <li>Errors in Validation of Other fields: Some errors persist in the validation of data in other fields, which do not block the registration flow but impact data integrity. </li>
+      <li>Compatibility in Secondary browsers: Differences were observed in the rendering of elements in Firefox and Safari, which should be improved to ensure visual consistency. </li>
     </ul>
   <br>
-  Pruebas de validación de datos: El 73% de las pruebas de validación de datos  se completaron satisfactoriamente.  Pero se estima que el otro 27% de las funcionalidades del sistema no detecta valores límites, ni diferencia caracteres alfabéticos de alfanuméricos. 
+  Data validation tests: 73% of the data validation tests were completed successfully. However, it is estimated that the remaining 27% of the system’s functionalities do not detect limit values nor differentiate between alphabetic and alphanumeric characters.  
   <br>
   <br>
-  Prueba exploratoria: La interfaz de versión web funciona correctamente. Se adapta a la pantalla si el usuario se dispone a hacer zoom y no tiene problemas de usabilidad.
+  Exploratory session: The web version interface operates correctly. It adjusts to the screen when the user zooms in, with no usability issues. 
   </p>
-  <h4 id = "version_mobile">Versión Mobile</h4>
+  <h4 id = "version_mobile">Mobile Version</h4>
   <p>
-   En la versión mobile, se observaron mejoras similares, aunque algunos problemas de visualización y usabilidad persisten:
+   In the mobile version, similar improvements were observed, although some display and usability issues persist:
     <ul>
-      <li>Campo de Especie: La lista desplegable funcionó correctamente, permitiendo la selección de especies no comunes y registrando exitosamente en la lista de mascotas del cliente.</li>
-      <li>Problemas de Visibilidad y Accesibilidad: La interfaz no se ajustó adecuadamente en todos los dispositivos móviles, afectando la navegación y la facilidad de uso en pantallas pequeñas.</li>
+      <li>Species field: The dropdown list worked correctly, allowing the selection of uncommon species and successfully registering them in the client’s pet list. </li>
+      <li>Visibility and Accessibility issues: The interface did not adjust properly on all mobile devices, affecting navigation and ease of use on smaller screens. </li>
     </ul>
-  Pruebas de validación de datos: El 35% de las pruebas de validación de datos se completaron satisfactoriamente. El sistema mobile presenta los mismos errores que su contraparte en Web. No detecta valores límites, ni diferencia caracteres alfabéticos de alfanuméricos. 
+  Data validation tests: 35% of the data validation tests were completed successfully. The mobile system presents the same errors as its web counterpart. It does not limit values, nor does it differentiate between alphabetic and alphanumeric characters. 
   <br>
   <br>
- Prueba exploratoria: La interfaz de la versión mobile presenta varios problemas. No es responsive, por lo que si el usuario decide hacer zoom, éste no se adapta a la pantalla del dispositivo. Además, el logo de la empresa no carga y está dañado. Los botones de “Cancelar” y “Registrar Vacunas” ahora si se encuentran conectados a los respectivos formularios. Por lo tanto, cumplen su función al ejecutarlos. 
+Exploratory session: The mobile version interface presents several issues. It is not responsive, so if the user decides to zoom, it does not adjust to the device’s screen. Additionally, the company logo does not load and is damaged. The “Cancel” and “Register Vaccines” buttons are now correctly linked to their respective forms, and therefore, they function as expected when clicked. 
   </p>
-  <h3 id = "registro_vacunas">Registro de Vacunas</h3>
+  <h3 id = "registro_vacunas">Vaccines Register</h3>
   <p>
     <ul>
-      <li>Pruebas Funcionales: Las pruebas funcionales confirmaron que el sistema permite el ingreso correcto de datos válidos en el módulo de registro de vacunas, mostrando un mensaje de confirmación exitoso al usuario cuando se completan todos los campos requeridos de manera adecuada.</li>
-       <li>Validación de Campos Obligatorios: Las pruebas demostraron que el sistema responde adecuadamente a la omisión de datos en campos obligatorios, generando mensajes de error claros cuando el usuario deja en blanco alguno de los campos requeridos, como Nombre, Dosis, Fecha de Aplicación o Fecha de Vencimiento.</li>
-       <li>Validación de Datos Fuera de Rango: La mayoría de los datos fuera de los límites permitidos fueron rechazados correctamente. Sin embargo, se identificaron algunos fallos críticos en el tratamiento de datos inválidos:
+      <li>Functional tests: Functional tests confirmed that the system allows the correct entry of valid data in the vaccine registration module, showing a successful confirmation message to the user when all required fields are properly completed. </li>
+       <li>Mandatory field validation: The tests demonstrated that the system behaves correctly when data is omitted from mandatory fields, generating clear error messages when the user leaves any required fields blank, such as Name, Dose, Application Date, or Expiration Date. </li>
+       <li>Out-of-range data validation: Most data outside the allowed limits was correctly rejected. However, some critical failures were identified in the handling of invalid data:
 <br>
 <ul>
-  <li>Nombre con más de 100 caracteres: El sistema permitió el registro de nombres que exceden el límite de caracteres, lo cual debería ser rechazado y requiere corrección.</li>
-  <li>Nombre con caracteres no alfanuméricos: El sistema permitió el registro de nombres que contienen caracteres especiales, lo cual no cumple con los requisitos y debe revisarse.</li>
-  <li>Fecha de vencimiento anterior a la fecha de aplicación: Aunque se espera que el sistema rechace fechas de vencimiento que ocurren antes de la fecha de aplicación, en algunos casos, esta validación no se activó y el sistema permitió el registro incorrecto.</li>
+  <li>Name with more than 100 characters: The system allowed the registration of names exceeding the character limit, which should have been rejected and requires correction.</li>
+  <li>Name with non-alphanumeric characters: The system allowed the registration of names containing special characters, which does not comply with the requirements and should be reviewed.</li>
+  <li>Expiration date before Application date: Although the system is expected to reject dates that occur before the application date, in some cases, this validation did not trigger, and the system allowed incorrect registration. </li>
 </ul>
 </li>
     </ul>
-  Estos fallos indican que es necesario revisar las validaciones en el sistema para evitar que datos fuera de los rangos permitidos sean aceptados durante el registro de vacunas.
+  These failures indicate that the system validations need to be reviewed to prevent data outside the allowed ranges from being accepted during vaccine registration. 
   </p>
 </div>
 
 <br>
 
 <div id = "database">
-  <h2>Base de Datos</h2>
+  <h2>Database</h2>
   <p>
-  La base de datos de la veterinaria Guau Guau está compuesta por tres entidades CLIENTE, MASCOTA y VACUNA. Todas ellas presentan oportunidades de mejoras o tienen alguna limitación con respecto a las formas de normalización.
+  The Veterinaria Guau Guau database is made up of three entities: Client, Pet and Vaccine. <br>
+All of them present opportunities for improvement or have some limitations with normalization forms.
 <ol>
-  <li>La tabla CLIENTES presenta una posibilidad de mejora en el atributo Dirección, ya que este no se encuentra normalizado.
+  <li>Clients table present an opportunity of improvement in the Address attribute because it is not normalized.
     <br>
-Esto permite: <br>
+This allow:  <br>
     <ul>
-      <li>Realizar búsquedas o filtros más específicos. Por ejemplo, buscar clientes por ciudad o barrio.</li>
-      <li>Colocar restricciones más específicas. Por ejemplo, que el numeroPuerta deba ser un número entero de hasta 4 dígitos.</li>
-      <li>Aplicar cambios con mayor facilidad. Es posible realizar cambios en los distintos campos sin la necesidad de hacerlo para toda una cadena de dirección.</li>
+      <li>Perform more specific searches or filters. For example, search clients by city or neighborhood.</li>
+      <li>Setting more specific restrictions. For example, numberDoor must be an integer up to 4 digits.</li>
+      <li>Applying changes easily. </li>
     </ul>
 </li>
-  <li>Con respecto a la tabla MASCOTAS, se detectaron dos posibles mejoras en el atributo Especie: <br>
+  <li>Regarding the Pets table, two potential improvements were detected in the Specie attribute. <br>
     <ul>
-      <li>Utilizar una restricción CHECK para estandarizar los datos y evitar errores o variaciones innecesarias en la información. Por ejemplo, se evitarían inconsistencias como “perro”, “Perro”, “PERRO” para la misma especie. 
-Esto brinda un mejoramiento en la calidad en la validación de datos y minimiza la posibilidad de errores humanos al ingresar especies no válidas. Por  último, la restricción CHECK permite facilidad de mantenimiento, ya que, si se necesita agregar más especies, solo basta con actualizar dicha restricción.</li>
-      <li>Crear una tabla de referencia llamada ESPECIES. Esta tabla enlista las especies válidas. Luego se puede establecer una clave foránea en la tabla MASCOTAS que apunte a la tabla ESPECIES. 
-Esto permite gestionar y actualizar las especies válidas de forma más sencilla.
+      <li>Add a CHECK restriction to standardize the data and avoid mistakes unnecessary on the information. For example, it would avoid inconsistencies as “dog”, “Dog”, “DOG” for the same specie.  <br>
+This gives a quality improvement in data validation and minimizes the possibility of human errors when entering invalid species. 
+         <br>
+At last, CHECK restriction allows maintenance easily because if it is necessary add more species just would be enough to update the restriction.</li>
+      <li>Create a reference table called Species. This table contains valid species. Then a foreign key can be set on the pets table that points toward Species table. This allows managing and updating valid species in an easy way. 
 </li>
     </ul>
   </li>
-  <li>En la tabla VACUNAS se detectaron otras potenciales mejoras:
+  <li>In the Vaccines table others potential improvements were found:
 <br>
     <ul>
-      <li>Con respecto al atributo Dosis se entiende que es necesaria una mejor clarificación.
+      <li>Regarding the Dose attribute, a better clarification is necessary.
 </li>
-      <li>Con respecto a los atributos Fecha Aplicación y Fecha Vencimiento, se sugiere agregar una restricción CHECK para asegurar que Fecha Vencimiento sea posterior a Fecha Aplicación. Esto evitaría errores en los registros de fechas. 
+      <li>Regarding the attributes of ApplicationDate and DueDate, it is suggested add a CHECK restriction to ensure that DueDate to be later than ApplicationDate. <br>
+This would avoid errors on the date records. 
 </li>
-      <li>Otra posible sugerencia de mejora es crear una tabla de TIPOS_DE_VACUNAS con dos campos: Nombre y VacunaID. Luego, esta tabla puede ser referenciada en la tabla VACUNAS a través de una llave foránea. Esto puede resultar útil para estandarizar las vacunas en un solo lugar.</li>
-      <li>Por último, se sugiere como mejora establecer una clave única compuesta por Mascota ID, Nombre y Fecha Aplicacion para evitar que se registre la misma vacuna para una mascota en la misma fecha. 
+      <li>Another potential improvement is create a types of vaccines table with two fields: Name and VaccineID. Then, this table it can be reference through a foreing key on the vaccines table. This would be useful to standardize vaccines in a single place. </li>
+      <li>At last, set a unique composite key for petID, name and ApplicationDate. This is suggested as an improvement to avoid entering the same vaccines for a pet at the same date. 
 </li>
     </ul>
   </li>
@@ -266,84 +269,89 @@ Esto permite gestionar y actualizar las especies válidas de forma más sencilla
 <br>
 
 <div id = "accesibilidad">
-  <h2>Accesibilidad</h2>
+  <h2>Accessibility</h2>
   <p>
-    El 64% de las pruebas realizadas para verificar la accesibilidad del sitio resultaron ser exitosas. <br>
-Si bien esto puede percibirse como un sitio con una buena noticia para los usuarios con discapacidades visuales o motrices, aún queda mucho por mejorar en este aspecto. 
+    64% of the tests conducted to verify the site’s accessibility were successful. <br>
+While this may be seen as good news for users with visual or motor disabilities, there is still much to improve in this regard. 
   </p>
 </div>
 
 <br>
 
 <div id = "compatibilidad">
-  <h2>Compatibilidad y Usabilidad</h2>
+  <h2>Compatibility and Usability</h2>
   <p>
-    Se realizaron 14 pruebas para verificar la compatibilidad y usabilidad del sitio web de la Veterinaria Guau Guau. 
-El 86% de estas pruebas fueron ejecutadas con éxito. El 14% de las pruebas resultaron fallidas y todas éstas se concentraron en la parte móvil.
-Todas las pruebas ejecutadas en distintos navegadores del entorno web resultaron exitosas. A partir de esto, se puede inferir que el sitio no presenta problemas de compatibilidad ni usabilidad en navegadores web. Sin embargo, estos problemas surgen en el entorno móvil, lo que sugiere que el desarrollo actual de las funcionalidades no está enfocado en estos usuarios.
-  </p>
+    14 tests were conducted to verify the compatibility and usability of the Veterinaria Guau Guau website. <br> 
+86% of these tests were successfully executed. 14% of the tests failed, and all of these were concentrated in the mobile version. 
+<br>
+All tests conducted in different web browsers were successful. Based on this, it can be inferred that the site does not present compatibility or usability issues in web browsers. However, these issues arise in the mobile environment, suggesting that the current development of functionalities is not focused on these users. </p>
 </div>
 
 <br>
 
 <div id = "datos">
-  <h2>DATOS Y MÉTRICAS</h2>
+  <h2>DATA and METRICS</h2>
   <div align = center>
   <img src = "test_cases_environment.png" alt = "casos de prueba">
   </div>
   <p>
-    El 64% de las pruebas realizadas por el equipo resultaron ser exitosas. <br>
-Mientras que el 36% no pudieron ser completadas satisfactoriamente, ya sea porque fallaron o porque quedaron con estado “bloqueado”.
+    64% of the tests performed by the team were successful, while 36% could not be completed successfully, either because they failed or remained in a “blocked” status.
   </p>
 <br>
   <div align = center>
     <img src = "execution_results.png" alt = "resultados por ambiente">
   </div>
   <p>
-    La mayoría de las pruebas fueron ejecutadas en Web. Tanto en Chrome, como en otros navegadores como Opera GX, Microsoft Edge, Firefox, etc.
+    Most of the tests were run on Web. Using Google Chrome and other browsers like Opera GX, Microsoft Edge, Firefox, etc.
   </p>
 <br>
   <div align = center>
     <img src = "execution_results_2.png" alt = "resultados por ambiente y tester">
   </div>
   <p>
-    Todos los Testers del equipo aplicaron pruebas en el sitio web utilizando como entorno la web. <br>
-Dos miembros se enfocaron en web durante esta etapa del trabajo, mientras que el resto trabajó tanto en web como en mobile. 
+All testers on the team applied tests on the website using the web as the environment.  <br>
+Two members focused on web during this stage of the work, while the rest worked on both web and mobile. 
   </p>
 </div>
 
 <br>
 
 <div id = "recomendaciones">
-  <h2>RECOMENDACIONES</h2>
+  <h2>RECOMMENDATIONS</h2>
   <p>
-    En base a los resultados obtenidos durante el proceso de testing se hacen las siguientes recomendaciones: <br>
+Based on the results obtained during the testing process, the following recommendations are made:
+  <br>
 
-Reforzar la validación de datos en los distintos formularios para proteger al sistema de los posibles errores de usuario, aplicando restricciones a los distintos campos. 
-Se recomienda aplicar técnicas de valores límites, ya que este continúa siendo la mayor debilidad del sistema.  <br>
+Reinforce data validation in the different forms to protect the system from potential user errors by applying restrictions to the different fields. 
+It is recommended to implement boundary value techniques as this remains the system’s greatest weakness.  <br>
 
-Para mejorar la compatibilidad del sitio se sugiere aplicar responsive design, para que éste se adapte a las distintas resoluciones de pantalla. También vuelve adaptables los elementos que lo componen, como las tablas en la sección “Dashboard”, ya que éstas se “salen” del formulario cuando contienen datos muy extensos. <br>
+To improve the site’s compatibility it is suggested to apply responsive design so it can adapt to different screen resolutions. This would also make the elements that compose it more adaptable, such as the tables in the “Dashboard” section, since these currently “overflow” the form when containing extensive data. <br>
 
-Con respecto a la usabilidad del sitio, se recomienda agregar al “Dashboard” una tabla de Clientes para poder gestionarlos desde la administración. Si se necesita “dar de baja” un cliente, el sistema no permite realizar esta acción. Tampoco se visualiza a qué cliente corresponde qué mascota debido a la ausencia de una tabla. 
-Por último, para mejorar la usabilidad y la experiencia de usuario, se recomienda que el sistema permita “editar” mascotas y vacunas con el fin de actualizar o corregir información ya existente. 
-En cuanto a la interfaz, se recomienda el uso de mensajes más descriptivos y reubicar algunos botones (como la casilla de registrar mascota en el formulario Registro de Cliente). <br>
+Regarding site usability it is recommended to add a “Clients” table to the “Dashboard” to allow client management from the admin panel. If the admin needs to “cancel” a client the system does not allow this action. It is also not possible to visualize which client corresponds to which pet due to the absence of a table. <br>
+Lastly, to improve usability and user experience, it is recommended that the system allows “editing” pets and vaccines to update or correct existing information. <br>
+Regarding the interface, it is suggested to use more descriptive messages and relocate some buttons (such as the “Register Pet”  field on the Client Registration form).
+ <br>
 
-En cuanto a la accesibilidad del sitio, se sugiere adoptar algunas medidas para mejorar la experiencia de los usuarios con discapacidades. Estas medidas se basan en las normas WCAG y son por ejemplo:
+In terms of the site accessibility, the following measures are suggested to improve the experience for the users with disabilities, based on WCAG standards: 
 <br>
 <ul>
-  <li>Mejora en la navegación por teclado. El contenido principal no está señalizado y esto obliga al usuario a recorrer toda la página para poder encontrarlo.</li>
-  <li>Agregar botones de ayuda o más información.</li>
-  <li>Agregar al código atributos ARIA para mejorar la experiencia de usuarios no videntes o con discapacidades visuales. Sin estos atributos las tecnologías de asistencia no reconocen correctamente los mensajes. 
+  <li>Improved keyboard navigation. The main content is not marked, forcing users to navigate through the entire page to find it.</li>
+  <li>Add “help” or “more information” buttons.</li>
+  <li>Include ARIA attributes in the code to improve the experience for blind or visually impaired users. Without these attributes, assistive technologies cannot correctly interpret messages.
 </li>
-  <li>Cambiar el título de la página “Sistemas de Gestión de Clientes y Mascotas - Veterinaria XYZ” por el título “Sistemas de Gestión de Clientes y Mascotas - Guau Guau Veterinaria”. Esto permite que los usuarios no videntes puedan reconocer la empresa a través de la tecnología de asistencia. Un nombre de empresa incorrecto puede traer confusión y frustración. 
+  <li>Change the page title from "Client and Pet Management System - Veterinaria XYZ" to "Client and Pet Management System - Guau Guau Veterinaria." This allows visually impaired users to recognize the company through assistive technology. An incorrect company name may cause confusion and frustration.  
 </li>
 </ul>
 <br>
-En referencia a la documentación del sistema, se solicita agregar en los anexos del ESRE especificaciones más exhaustivas de las distintas variables que maneja el sistema. Por ejemplo, en el “Registro de Vacunas” se puede especificar qué se entiende por Dosis. Si se está haciendo referencia a la cantidad de dosis aplicada en la mascota (por ejemplo 0.5 mg) o si hace referencia al número de dosis aplicada en la mascota (por ejemplo primera o segunda dosis). <br>
+Regarding system documentation, it is requested to include more detailed specifications in the ESRE annexes for the various variables used by the system. For example, in the "Vaccine Registration" it could specify what is meant by "Dose". Whether it is referring to the amount of dose administered to the pet (e.g. 0.5 mg), or whether it refers to the number of doses administered (e.g. first or second dose). <br>
 
-Con respecto a la base de datos proporcionada, se sugiere adoptar un modelo que aporte mayor completitud que incluya las sugerencias aportadas en el informe técnico. <br>
+For the provided database, it is suggested to adopt a more complete model that incorporates the recommendations made in the technical report.
+<br>
 
-Se muestra en el modelo las dos posibles formas de representar el atributo Dosis. Como un atributo único en el caso de que se entienda como el número de dosis aplicada. Como dos atributos distintos en caso de entenderla como la cantidad de dosis aplicada. <br>
+The model shows two possible ways to represent the "Dose" attribute.
+As a single attribute if it refers to the number of doses administered.
+As two different attributes if it refers to the amount of dose administered. 
+<br>
 
 
   </p>
@@ -353,33 +361,34 @@ Se muestra en el modelo las dos posibles formas de representar el atributo Dosis
 <br>
 
 <div id = "conclusiones">
-  <h2>CONCLUSIONES</h2>
-  <h3>Validación de datos
-</h3>
+  <h2>CONCLUSIONS</h2>
+  <h3>Data validation</h3>
   <p>
-    En términos generales, se puede decir que el sistema aún se encuentra con limitaciones. Si bien la mayoría de las pruebas realizadas se completaron con éxito, el 36% de las pruebas fallidas se relacionan a problemas de validación de datos y de usabilidad. Estos problemas pueden significar debilidades tanto en seguridad (inyecciones SQL por ejemplo) como en la integridad de la información (por ejemplo ingreso de información incompleta o datos erróneos). <br>
-Además, pueden causar una mala experiencia de usuario reduciendo la confianza que tenga éste en el sistema reduciendo su disposición a utilizarlo. 
-Problemas de validación en una etapa inicial, no solo dificulta el procesamiento de la información, sino que también puede implicar futuros costos de mantenimiento y corrección de errores. 
-
+   In general, it can be said that the system still has significant limitations. While the majority of tests were successfully completed, 36% of the failed tests were related to issues with data validation and usability. These problems could pose risks to both security (e.g. SQL injections) and information integrity (e.g. incomplete or incorrect data entry).
+ <br>
+In addition, such issues may lead to a poor user experience, reducing user trust in the system and their willingness to use it.
+<br>
+Data validation problems at an early stage not only hinder the processing of information but can also result in future maintenance and error correction costs.
   </p>
 
-  <h3>Usabilidad</h3>
+  <h3>Usability</h3>
   <p>
-    En cuanto a la interfaz, se puede inferir que aplicar las sugerencias de mejora que aparecen en este informe (como agregar una tabla de gestión de clientes en la sección Dashboard) mejoraría la usabilidad de la herramienta. 
-
+    Regarding the interface, it can be inferred that implementing the improvement suggestions outlined in this report (such as adding a client management table in the Dashboard section) would enhance the usability of the tool.
   </p>
 
-  <h3>Accesibilidad</h3>
+  <h3>Accessibility</h3>
   <p>
-    Por último, si bien la mayoría de las pruebas de accesibilidad fueron exitosas, el sitio aún carece de características importantes que incluyan a los usuarios de tecnologías de asistencia, como el uso de botones de ayuda o una buena configuración de alto contraste. 
+Lastly, although most accessibility tests were successful, the site still lacks important features that would make it inclusive for users of assistive technologies, such as help buttons or proper high-contrast configurations.
   </p>
 
-  <h3>Conclusión final</h3>
+  <h3>Final conclusion</h3>
   <p>
-    Por lo tanto, se concluye que la validación de datos sigue siendo el principal problema del sitio web de la veterinaria y desde el equipo se cree que éste debe ser atendido como prioridad. Una posible solución es agregar criterios de aceptación de datos en cada campo de los distintos formularios. Además, se sugiere reforzar la integridad de los datos permitiendo al usuario releer, corregir y confirmar los datos antes de registrar un nuevo cliente, mascota o vacuna. Esto permitirá optimizar la experiencia del usuario y reducir el riesgo de errores en futuras interacciones con el sistema.
+It is concluded that data validation remains the primary issue with the veterinary website, and the team believes it should be addressed as a priority. A possible solution would be to add data acceptance criteria for each field in the different forms.
+    <br>
+Additionally, it is suggested to reinforce data integrity by allowing users to review, correct, and confirm their input before registering a new client, pet, or vaccine. This would optimize the user experience and reduce the risk of errors in future interactions with the system.
 <br>
 <br>
-Este informe resume los resultados clave del proceso de retesting. Si tienes alguna pregunta o necesitas información adicional, no dudes en contactarnos.
+This report summarizes the key results of the retesting process. If you have any questions or need additional information, please feel free to contact us.
 
   </p>
 </div>
