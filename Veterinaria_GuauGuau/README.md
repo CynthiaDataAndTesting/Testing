@@ -35,3 +35,79 @@
     </table>
   </p>
 </div>
+
+<br>
+
+<div>
+  <h2>Pruebas que se ejecutaron</h2>
+  <p>
+    El proceso de testing abarcó una amplia variedad de enfoques y técnicas incluyendo:
+    <br>
+    <br>
+    <strong>Pruebas de validación de datos:</strong> Se realizaron distintas pruebas que verifican que los datos ingresados cumplen con los requisitos especificados (como formato de correos electrónicos, contraseñas, etc).
+    <br>
+    <br>
+    <strong>Técnicas de valores límites:</strong> Se probaron los valores límites para cada campo en los distintos formularios.
+    <br>
+    <br>
+    <strong>Pruebas de enfoque negativo:</strong> Se sometió a las funcionalidades a escenarios de prueba negativos, ingresando registros con datos incorrectos para evaluar la resistencia a errores de usuario. 
+    <br>
+    <br>
+    <strong>Pruebas de enfoque positivo:</strong> Se realizaron pruebas para verificar que los distintos formularios funcionaran correctamente bajo condiciones normales, validando que los usuarios pudieran realizar acciones sin problemas.
+   <br>
+    <br>
+   <strong>Pruebas de Compatibilidad:</strong> Se realizaron pruebas en dispositivos diferentes para verificar que la sección funcione tanto en PC como en Teléfono móvil. Además, se aplicaron pruebas en diferentes navegadores.
+   <br>
+    <br>
+ <strong>Pruebas de Accesibilidad:</strong> Se aplicaron distintas pruebas que verifican el cumplimiento de las normas WCAG que definen la accesibilidad de un sitio web. Fueron tomados en cuenta los cuatro principios: Perceptible, Operable, Adaptable y Robusto.
+  <br>
+    <br>
+    <strong>Pruebas de Usabilidad:</strong> Se exploraron las distintas secciones desde el punto de vista del usuario tomando como base la norma ISO 25010.
+    <br>
+    <br>
+   <strong> Pruebas exploratorias:</strong> Se exploraron las distintas secciones para identificar posibles problemas y escenarios no documentados. Esto ayudó a descubrir áreas de mejora y a abordar situaciones inesperadas.
+    <br>
+    <br>
+  <strong>  Pruebas de confirmación:</strong> Se hizo trabajo de retesting para verificar que las incidencias reportadas fueron efectivamente solucionadas.
+    <br>
+    <br>
+  <strong>  Pruebas de Regresión:</strong> Se realizaron pruebas de regresión para verificar que las soluciones aplicadas por el equipo de desarrollo no hayan provocado nuevas incidencias.
+    <br>
+    <br>
+    En el presente trabajo no se incluyen pruebas exhaustivas en los requerimientos no funcionales como rendimiento, mantenimiento o escalabilidad ya que el sistema no se encuentra alojado en un servidor.
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h2>CONCLUSIONES</h2>
+  <h3>Validación de datos
+</h3>
+  <p>
+    En términos generales, se puede decir que el sistema aún se encuentra con limitaciones. Si bien la mayoría de las pruebas realizadas se completaron con éxito, el 36% de las pruebas fallidas se relacionan a problemas de validación de datos y de usabilidad. Estos problemas pueden significar debilidades tanto en seguridad (inyecciones SQL por ejemplo) como en la integridad de la información (por ejemplo ingreso de información incompleta o datos erróneos). <br>
+Además, pueden causar una mala experiencia de usuario reduciendo la confianza que tenga éste en el sistema reduciendo su disposición a utilizarlo. 
+Problemas de validación en una etapa inicial, no solo dificulta el procesamiento de la información, sino que también puede implicar futuros costos de mantenimiento y corrección de errores. 
+
+  </p>
+
+  <h3>Usabilidad</h3>
+  <p>
+    En cuanto a la interfaz, se puede inferir que aplicar las sugerencias de mejora que aparecen en este informe (como agregar una tabla de gestión de clientes en la sección Dashboard) mejoraría la usabilidad de la herramienta. 
+
+  </p>
+
+  <h3>Accesibilidad</h3>
+  <p>
+    Por último, si bien la mayoría de las pruebas de accesibilidad fueron exitosas, el sitio aún carece de características importantes que incluyan a los usuarios de tecnologías de asistencia, como el uso de botones de ayuda o una buena configuración de alto contraste. 
+  </p>
+
+  <h3>Conclusión final</h3>
+  <p>
+    Por lo tanto, se concluye que la validación de datos sigue siendo el principal problema del sitio web de la veterinaria y desde el equipo se cree que éste debe ser atendido como prioridad. Una posible solución es agregar criterios de aceptación de datos en cada campo de los distintos formularios. Además, se sugiere reforzar la integridad de los datos permitiendo al usuario releer, corregir y confirmar los datos antes de registrar un nuevo cliente, mascota o vacuna. Esto permitirá optimizar la experiencia del usuario y reducir el riesgo de errores en futuras interacciones con el sistema.
+<br>
+<br>
+Este informe resume los resultados clave del proceso de retesting. Si tienes alguna pregunta o necesitas información adicional, no dudes en contactarnos.
+
+  </p>
+</div>
