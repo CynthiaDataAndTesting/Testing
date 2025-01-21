@@ -129,4 +129,8 @@ Este informe resume los resultados clave del proceso de retesting. Si tienes alg
   <a href = "Segundo_informe_etapa3.md">
     <img alt="Static Badge" src="https://img.shields.io/badge/Informe%20Final%20-%20espa%C3%B1ol%20-%20%23449BB3?style=for-the-badge">
   </a>
+  <br>
+  <a href = "https://youtu.be/ApZtqEXLhEA">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Video%20Presentaci%C3%B3n%20-%20aqu%C3%AD%20-%20%23449BB3?style=for-the-badge">
+  </a>
 </div>
