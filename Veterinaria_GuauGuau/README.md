@@ -15,6 +15,12 @@
   Como Líder de Documentación, me dediqué a crear modelos de reportes e informes para que todo el proyecto tuviera una coherencia al momento de llevar los registros. También creé un espacio en Google Drive para volcar los avances del equipo, y revisé redacción y coherencia de los distintos archivos.</p>
 </div>
 
+<div align = right>
+  <a href = "#informes">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Informes%20completos%20-%20aqu%C3%AD%20-%20%23449BB3?style=for-the-badge">
+  </a>
+</div>
+
 <br>
 
 <div>
@@ -110,4 +116,17 @@ Problemas de validación en una etapa inicial, no solo dificulta el procesamient
 Este informe resume los resultados clave del proceso de retesting. Si tienes alguna pregunta o necesitas información adicional, no dudes en contactarnos.
 
   </p>
+</div>
+
+<br>
+
+<div id = "informes">
+  <h3>Ver informes completos aquí:</h3>
+  <a href = "executive_report_testing.md">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Informe%20Final%20-%20ingl%C3%A9s%20-%20%23449BB3?style=for-the-badge">
+  </a>
+  <br>
+  <a href = "Segundo_informe_etapa3.md">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Informe%20Final%20-%20espa%C3%B1ol%20-%20%23449BB3?style=for-the-badge">
+  </a>
 </div>
